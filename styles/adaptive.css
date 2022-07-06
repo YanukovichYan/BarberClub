@@ -1,0 +1,759 @@
+@media screen and (max-width: 1919px) {
+    body {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .menu {
+        margin-left: 75px;
+    }
+
+    .club {
+        right: 0;
+        z-index: -1;
+    }
+
+    .barber {
+        left: 0;
+    }
+
+    .popup-order-image {
+        display: none;
+    }
+
+    .order-popup {
+        width: 608px;
+        /*justify-content: center;*/
+        /*left: calc(50% - 304px);*/
+    }
+
+    .popup-order-info {
+        padding: 38px;
+    }
+
+    .success-1 {
+        padding: 184px 93px;
+    }
+}
+
+@media screen and (max-width: 1240px) {
+    .contacts-info {
+        justify-content: center;
+    }
+
+    .shape {
+        display: none;
+    }
+
+    .contacts-map {
+        position: static;
+        width: 677px !important;
+    }
+
+    /*.contacts-map {*/
+    /*    width: 677px!important;*/
+    /*    left: 387px;*/
+    /*}*/
+    /*.shape {*/
+    /*    width: 677px!important;*/
+    /*}*/
+    /*.map iframe {*/
+    /*    width: 677px!important;*/
+    /*}*/
+    /*.contacts-description {*/
+    /*    width: 299px;*/
+    /*}*/
+}
+
+@media screen and (max-width: 1230px) {
+    .multiple-items .slick-prev {
+        left: 0;
+    }
+
+    .multiple-items .slick-next {
+        right: 0;
+    }
+
+    .slick-next {
+        right: 0;
+    }
+
+    .slick-prev {
+        left: 0;
+    }
+
+    .services-main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services ul li {
+        padding-bottom: 15px;
+    }
+
+    .services-menu {
+        margin-top: 30px;
+    }
+
+    .services-menu ul {
+        justify-content: center;
+    }
+
+    .services-menu ul li:nth-child(4) {
+        margin-right: 0;
+    }
+
+    .services {
+        text-align: center;
+    }
+
+    .line {
+        left: unset;
+        right: 181px;
+        top: 34px;
+    }
+
+    .button-services {
+        margin: 50px 0 0 0;
+    }
+
+    .table {
+        margin: 25px 0 30px 0;
+    }
+
+    .services .container {
+        max-width: 738px;
+    }
+}
+
+
+@media screen and (max-width: 1188px) {
+    .menu {
+        margin-left: 20px;
+    }
+
+    .header .number {
+        margin-left: 20px;
+    }
+
+    .main-image {
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 1155px) {
+
+    .subscribe {
+        flex-direction: column;
+    }
+
+    .subscribe-title {
+        margin-bottom: 35px;
+    }
+
+}
+
+@media screen and (max-width: 1100px) {
+    .container-masters {
+        max-width: 550px;
+    }
+
+    .number {
+        display: none;
+    }
+
+    .popup-discount {
+        width: 700px;
+        height: 355px;
+        left: calc(50% - 350px);
+    }
+
+    .popup-discount-text {
+        font-size: 27px;
+        padding: 100px;
+    }
+
+    .contacts-map {
+        width: 475px !important;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+
+    .main {
+        padding-top: 70px;
+    }
+
+    .main-title br {
+        display: none;
+    }
+
+    .description .container {
+        padding-bottom: 50px
+    }
+
+    .services .container {
+        padding: 50px 0;
+    }
+
+    .masters .container {
+        padding: 50px 0;
+    }
+
+    .discount .container {
+        padding: 50px 0;
+    }
+
+    .instagram .container {
+        padding: 50px 0;
+    }
+
+    .container {
+        max-width: 738px;
+    }
+
+    .actions {
+        display: none;
+    }
+
+    .description-top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .description-info {
+        padding: 0;
+        margin-top: 50px;
+    }
+
+    .number {
+        display: none;
+    }
+
+    .main-image {
+        bottom: -62px;
+        right: -109px;
+    }
+
+    .advantages {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .advantage:nth-child(3) {
+        margin-top: 50px;
+    }
+
+    .services-image {
+        margin-top: 50px;
+    }
+
+    .discount .container {
+        flex-direction: column;
+    }
+
+    .discount-image {
+        margin-top: 50px;
+    }
+
+    .subscribe {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .description-title {
+        text-align: center;
+    }
+
+    .description-text {
+        width: 100%;
+    }
+
+    .advantage {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .header .container {
+        flex-wrap: wrap;
+    }
+
+
+    .main-image {
+        width: 450px;
+        height: 765px;
+        bottom: -108px;
+        right: 0;
+    }
+
+    .main-image img {
+        width: 100%;
+    }
+
+    .main-info {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-image {
+        position: relative;
+        left: 0;
+        top: 0;
+        margin-top: 35px;
+        height: unset;
+    }
+
+    .main .container {
+        padding-bottom: 0;
+    }
+
+    .barber {
+        display: none;
+    }
+
+    .club {
+        display: none;
+    }
+
+    .popup-discount {
+        width: 550px;
+        left: calc(50% - 275px);
+    }
+
+    .popup-discount-text {
+        padding: 100px 28px;
+    }
+
+    .contacts-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contacts-map {
+        width: 360px !important;
+    }
+
+    .rights {
+        text-align: center;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 698px) {
+    .subscribe-title {
+        font-size: 27px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 689px) {
+    .header .container {
+        justify-content: center;
+    }
+
+    .menu {
+        margin-top: 30px;
+    }
+
+    .main-text {
+        max-width: 100%;
+    }
+
+    .main-title {
+        max-width: 100%;
+    }
+
+    .rights {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .input-order {
+        width: 100%;
+        height: 52px;
+    }
+
+    .order-popup {
+        width: 400px;
+        height: unset;
+    }
+
+    .razor {
+        display: none;
+    }
+
+    .popup-order-title {
+        font-size: 27px;
+    }
+
+    .popup-order-text {
+        font-size: 14px;
+    }
+
+    .success-1 {
+        padding: 106px 53px;
+    }
+
+    .success-title {
+        font-size: 27px;
+    }
+
+    .pos-name {
+        top: 54px;
+    }
+
+    .pos-phone {
+        top: 132px;
+        left: 5px;
+    }
+
+    .pos-service {
+        top: 212px;
+    }
+
+    .pos-master {
+        top: 291px;
+        left: 5px;
+    }
+
+    .pos-date {
+        top: 370px;
+    }
+
+    .pos-time {
+        top: 449px;
+        left: 5px;
+    }
+}
+
+@media screen and (max-width: 631px) {
+    .advantage:nth-child(2) {
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 608px) {
+    .services-menu ul {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 595px) {
+    .table-title {
+        width: unset;
+    }
+}
+
+@media screen and (max-width: 571px) {
+
+    .header .container {
+        justify-content: space-between;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu.open {
+        display: flex;
+        align-items: center;
+    }
+
+    .close-menu {
+        display: block;
+        width: 24px;
+        height: 24px;
+        fill: rgb(188, 18, 18);
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+
+    .menu {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(13, 13, 13, 0.9);
+        margin: 0;
+        z-index: 999999999;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .menu ul li {
+        margin: 15px 0;
+    }
+
+    .menu ul li a {
+        color: white;
+    }
+
+    .services-image {
+        width: 290px;
+    }
+
+    .popup-discount {
+        width: 400px;
+        height: 280px;
+        left: calc(50% - 200px);
+        top: calc(50% - 140px);
+    }
+
+    .popup-discount-text {
+        font-size: 21px;
+        padding: 70px 28px;
+    }
+
+    .discount-percent {
+        font-size: 60px;
+    }
+}
+
+@media screen and (max-width: 533px) {
+    .table-text {
+        padding: 0 10px 0 10px;
+    }
+
+    .table-title {
+        padding-right: 5px;
+    }
+
+    .table-price {
+        padding-left: 5px;
+    }
+
+}
+
+@media screen and (max-width: 485px) {
+    .main-image {
+        width: 290px;
+        right: 0;
+        bottom: unset;
+        margin-top: 50px;
+    }
+
+    .popup-call {
+        width: 290px;
+        height: 400px;
+        padding: 35px 0 30px 0;
+        top: calc(50% - 200px);
+        left: calc(50% - 145px);
+    }
+
+    .popup-call-title {
+        font-size: 27px;
+    }
+
+    .popup-order-text {
+        font-size: 14px;
+    }
+
+    .blade {
+        display: none;
+    }
+
+    .order-popup {
+        width: 300px;
+    }
+
+    .position-error-one {
+        top: 191px;
+        left: 25px;
+    }
+
+    .position-error-two {
+        top: 282px;
+        left: 25px;
+    }
+
+    .popup-order-info {
+        padding: 23px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .insta {
+        flex-direction: column;
+    }
+
+    .instagram-actions {
+        margin-top: 35px;
+    }
+}
+
+
+@media screen and (max-width: 425px) {
+
+    .club {
+        display: none;
+    }
+
+    .barber {
+        display: none;
+    }
+
+    .description-image {
+        width: 290px;
+    }
+
+    .services-image {
+        width: 290px;
+    }
+
+    .discount-image {
+        width: 290px;
+    }
+
+    .popup-discount {
+        width: 290px;
+        height: 224px;
+        left: calc(50% - 145px);
+        top: calc(50% - 112px);
+    }
+
+    .popup-discount-text {
+        font-size: 14px;
+    }
+
+    .contacts-map {
+        width: 290px !important;
+    }
+
+    .contacts-description {
+        width: 290px;
+    }
+
+    .map iframe {
+        width: 290px !important;
+    }
+
+}
+
+@media screen and (max-width: 405px) {
+    .services-menu ul {
+        flex-direction: column;
+    }
+
+    .services-menu ul li {
+        margin-right: 0;
+    }
+
+    .table {
+        width: 290px;
+    }
+
+    .table-title {
+        font-size: 14px;
+        width: 100px;
+        padding-right: 25px;
+    }
+
+    .table-text {
+        font-size: 12px;
+        width: 92px;
+    }
+
+    .table-price {
+        width: 37px;
+        font-size: 14px;
+    }
+
+    .line {
+        top: 46px;
+        right: 50px;
+        height: 273px;
+    }
+}
+
+@media screen and (max-width: 325px) {
+
+    .main-title {
+        font-size: 27px;
+    }
+
+    .main-text {
+        font-size: 14px;
+    }
+
+    .description-title {
+        font-size: 27px;
+    }
+
+    .description-text {
+        font-size: 14px;
+    }
+
+    .advantage-text {
+        font-size: 14px;
+    }
+
+    .advantages {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services-title {
+        font-size: 27px;
+    }
+
+
+    .masters-title {
+        font-size: 27px;
+    }
+
+    .masters-text {
+        font-size: 14px;
+    }
+
+    .discount-title {
+        font-size: 27px;
+    }
+
+    .discount-number {
+        font-size: 40px;
+    }
+
+    .discount-text {
+        font-size: 14px;
+    }
+
+    .subscribe-title {
+        font-size: 27px;
+        text-align: center;
+    }
+
+    .contacts-title {
+        font-size: 27px;
+    }
+
+    .links {
+        margin-left: 0;
+        justify-content: center;
+    }
+
+
+}
+

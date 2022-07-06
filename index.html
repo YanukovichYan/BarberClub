@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BarberCLub</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="styles/slick.css"/>
+    <link rel="stylesheet" href="styles/slick-theme.css"/>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/jquery-ui.min.css">
+    <link rel="icon" href="images/grooming.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/adaptive.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+
+<div class="window">
+    <div class="popup-call animate__animated">
+        <div class="popup-info">
+            <div class="popup-call-title">Заказать звонок</div>
+            <div class="popup-call-text">Мы перезвоним вам в течении 5 минут.</div>
+            <div>
+                <input class="input input-name" type="text" placeholder="Александр">
+                <div class="error-input position-error-one">Напишите ваше имя</div>
+            </div>
+            <div>
+                <input class="input input-phone" type="text" placeholder="+375(__)-___-__-__">
+                <div class="error-input position-error-two">Введите ваш номер телефона</div>
+            </div>
+            <button class="button-red" id="order-call">Отправить заявку</button>
+            <div class="blade"><img src="images/blade.png" alt="Blade"></div>
+        </div>
+        <div class="success">Спасибо,
+            <div>мы свяжемся с вами в ближайшее время!</div>
+        </div>
+
+        <div class="close">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
+                        <g>
+	                            <g>
+		    <path d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872
+			c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872
+			c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052
+			L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116
+			c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952
+			c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116
+			c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z"/>
+	            </g>
+                </g>
+                </svg>
+        </div>
+    </div>
+</div>
+
+
+<header class="header wow animate__rotateInDownLeft">
+    <div class="container">
+        <div class="logo">
+            <img src="images/Logo.png" alt="Logo">
+        </div>
+        <div class="burger" id="burger">
+            <svg id="Layer_1" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path d="m464.883 64.267h-417.766c-25.98 0-47.117 21.136-47.117 47.149 0 25.98 21.137 47.117 47.117 47.117h417.766c25.98 0 47.117-21.137 47.117-47.117 0-26.013-21.137-47.149-47.117-47.149z"/>
+                <path d="m464.883 208.867h-417.766c-25.98 0-47.117 21.136-47.117 47.149 0 25.98 21.137 47.117 47.117 47.117h417.766c25.98 0 47.117-21.137 47.117-47.117 0-26.013-21.137-47.149-47.117-47.149z"/>
+                <path d="m464.883 353.467h-417.766c-25.98 0-47.117 21.137-47.117 47.149 0 25.98 21.137 47.117 47.117 47.117h417.766c25.98 0 47.117-21.137 47.117-47.117 0-26.012-21.137-47.149-47.117-47.149z"/>
+            </svg>
+        </div>
+        <nav class="menu" id="menu">
+
+            <div class="close-menu">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
+                        <g>
+	                            <g>
+		    <path d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872
+			c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872
+			c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052
+			L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116
+			c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952
+			c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116
+			c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z"/>
+	            </g>
+                </g>
+                </svg>
+            </div>
+
+            <ul>
+                <li><a href="#description" class="menu-item">О нас</a></li>
+                <li><a href="#services" class="menu-item">Услуги</a></li>
+                <li><a href="#discount" class="menu-item">Акции</a></li>
+                <li><a href="#masters" class="menu-item">Наши мастера</a></li>
+                <li><a href="#contacts" class="menu-item">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="number">+380 (98) 816-93-96</div>
+        <div class="actions call">
+            <div class="button-transparent">
+                <div class="phone">
+                    <img src="images/phone.png" alt="phone">
+                </div>
+                <div class="button-text">
+                    Заказать звонок
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="main wow animate__jackInTheBox">
+    <div class="container">
+        <div class="main-info">
+            <h1 class="main-title">
+                Barber Club
+                <span>- место
+                    <br>
+                    <span>для настоящих мужчин</span></span>
+            </h1>
+            <div class="main-text">Создайте деловой имидж, который достоин Вас!
+                Получите скидку <span>15%</span> на ваш первый визит
+            </div>
+            <div class="main-action">
+                <button class="button-red recording">Записаться</button>
+            </div>
+            <div class="main-image">
+                <img src="images/Man.png" alt="Man">
+            </div>
+            <div class="barber"><img src="images/Barber.png" alt="Barber"></div>
+            <div class="club"><img src="images/Club.png" alt="Club"></div>
+        </div>
+    </div>
+</section>
+
+<section class="description wow animate__lightSpeedInRight">
+    <div class="container" id="description">
+        <div class="description-top">
+            <div class="description-image">
+                <img src="images/Salon.png" alt="Salon">
+                <img src="images/blade-description.png" alt="Blade">
+            </div>
+            <div class="description-info">
+                <h2 class="description-title">О нас</h2>
+                <div class="description-text description-text-first">У нас есть всё, что требуется настоящему мужчине:
+                    атмосфера
+                    брутальности
+                    и мужского духа, профессионализм барберов и сохранение европейских традиций барберинга, а также
+                    отличный
+                    кофе и хорошая компания.
+                </div>
+                <div class="description-text description-text-second">Barber Club – это намного больше, чем просто
+                    мужская
+                    парикмахерская.
+                    Это место, где Вам помогут найти свой собственный, неповторимый стиль. Стоит довериться мастерам
+                    Barber
+                    Club один раз, и, поверьте, новый образ не оставит Вас равнодушным. Мужские стрижки и опасное бритье
+                    —
+                    это наш профиль, и мы уверены, что наши барберы делают это лучше всех.
+                </div>
+            </div>
+        </div>
+        <div class="advantages">
+            <div class="advantage">
+                <div class="advantage-icon">
+                    <img src="images/cup.png" alt="Cup">
+                </div>
+                <div class="advantage-text advantage-text-first">
+                    Мы предложим вам
+                    чашечку кофе или чая
+                </div>
+            </div>
+            <div class="advantage">
+                <div class="advantage-icon">
+                    <img src="images/grooming.png" alt="Grooming">
+                </div>
+                <div class="advantage-text advantage-text-second">
+                    Мы пострижем и побреем вас
+                    <div>по всем европейским традициям</div>
+                </div>
+            </div>
+            <div class="advantage">
+                <div class="advantage-icon pos">
+                    <img src="images/hairstyle.png" alt="hairstyle">
+                </div>
+                <div class="advantage-text advantage-text-third">
+                    И скоро вы снова захотите
+                    вернуться в наш барбершоп
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="services wow animate__fadeInRight">
+    <div class="container" id="services">
+        <h3 class="services-title">Наши услуги</h3>
+        <nav class="services-menu">
+            <ul>
+                <li><a href="#!" class="active" id="haircuts">Стрижки</a></li>
+                <li><a href="#!" id="shaving">Бритье</a></li>
+                <li><a href="#!" id="complex-services">Комплексные услуги</a></li>
+                <li><a href="#!" id="additional-services">Дополнительные услуги</a></li>
+            </ul>
+        </nav>
+        <div class="services-main">
+            <div class="table">
+                <div class="table-title">
+                    <div>Стрижка мужская</div>
+                    <div>Стрижка удлинённая</div>
+                    <div>Стрижка машинкой</div>
+                    <div>Стрижка детская</div>
+                    <div>Стрижка бороды</div>
+                </div>
+                <div class="table-text">
+                    <div>Подбор стрижки, 2 мытья, укладка</div>
+                    <div>Подбор стрижки, 2 мытья, укладка</div>
+                    <div>Без ножниц</div>
+                    <div>От 4 до 14 лет включительно, не удлиненная</div>
+                    <div>С распариванием и окантовкой бритвой шаветт</div>
+                </div>
+                <div class="table-price">
+                    <div>1400 руб.</div>
+                    <div>2100 руб.</div>
+                    <div>950 руб.</div>
+                    <div>1100 руб.</div>
+                    <div>950 руб.</div>
+                </div>
+            </div>
+            <div class="table">
+                <div class="table-title">
+                    <div>Моделирование усов</div>
+                    <div>Моделирование бороды</div>
+                    <div>Камуфляж усов</div>
+                    <div>Камуфляж бороды</div>
+                </div>
+                <div class="table-text">
+                    <div>Гель/пена</div>
+                    <div>Вапоризатор</div>
+                    <div>Краской</div>
+                    <div>Краской</div>
+                </div>
+                <div class="table-price">
+                    <div>750 руб.</div>
+                    <div>850 руб.</div>
+                    <div>500 руб.</div>
+                    <div>1050 руб.</div>
+                </div>
+            </div>
+            <div class="table">
+                <div class="table-title">
+                    <div>Barber</div>
+                    <div>Pro Barber</div>
+                    <div>Top Barber</div>
+                </div>
+                <div class="table-text">
+                    <div>Стрижка + моделирование усов и бороды</div>
+                    <div>Стрижка машинкой + моделирование усов и бороды</div>
+                    <div>Стрижка + бритьё опасной бритвой</div>
+                </div>
+                <div class="table-price">
+                    <div>1900 руб.</div>
+                    <div>2300 руб.</div>
+                    <div>3500 руб.</div>
+                </div>
+            </div>
+            <div class="table">
+                <div class="table-title">
+                    <div>Глубокое очищение кожи головы</div>
+                    <div>Удаление волос воском</div>
+                    <div>Кинезио-массаж головы</div>
+                </div>
+                <div class="table-text">
+                    <div></div>
+                    <div>Одна зона</div>
+                    <div>Top Barber</div>
+                </div>
+                <div class="table-price">
+                    <div>1500 руб.</div>
+                    <div>1000 руб..</div>
+                    <div>5000 руб.</div>
+                </div>
+            </div>
+            <div class="services-image">
+                <img src="images/grooming-men.png" alt="Grooming-men">
+            </div>
+        </div>
+        <button class="button-services button-red recording wow animate__shakeX">Записаться</button>
+    </div>
+</section>
+
+<div class="window-order">
+    <div class="order-popup animate__animated">
+        <div class="popup-order-image">
+            <img src="images/men-order.png" alt="Men">
+        </div>
+        <div class="popup-order-info">
+            <div class="popup-order-title">Оформить заявку</div>
+            <div class="popup-order-text">Мы перезвоним вам в течении 5 минут</div>
+            <div class="grid">
+                <div>
+                    <input class="input input-order input-order-name" type="text" id="input-order-name"
+                           placeholder="Александр">
+                    <div class="error-input pos-name">Напишите ваше имя</div>
+                </div>
+                <div>
+                    <input class="input input-order input-order-phone" type="text" placeholder="+375(__)-___-__-__">
+                    <div class="error-input pos-phone">Введите ваш номер телефона</div>
+                </div>
+                <div>
+                    <input class="input input-order input-order-service" type="text" placeholder="Выберите услугу">
+                    <div class="error-input pos-service">Необходимо выбрать услугу</div>
+                </div>
+                <div>
+                    <input class="input input-order input-order-master" type="text" placeholder="Выберите мастера">
+                    <div class="error-input pos-master">Выберите мастера</div>
+                </div>
+                <div>
+                    <input class="input input-order input-order-date" type="text" id="datepicker"
+                           placeholder="Выберите дату">
+                    <div class="error-input pos-date">Выберите дату</div>
+                </div>
+                <div>
+                    <input class="input input-order input-order-time" type="text" placeholder="Выберите время">
+                    <div class="error-input pos-time">Выберите время</div>
+                </div>
+            </div>
+            <button class="button-red" id="button-order">Отправить заявку</button>
+        </div>
+        <div class="success-1">
+            <div class="success-title">Спасибо за ваш заказ!</div>
+            <div class="success-text">Мы перезвоним вам для уточнения
+                <div>данных в течении 5 минут.</div>
+            </div>
+        </div>
+        <div class="razor"><img src="images/razor.png" alt="Blade"></div>
+        <div class="close-order-popup">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
+                        <g>
+	                            <g>
+		    <path d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872
+			c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872
+			c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052
+			L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116
+			c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952
+			c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116
+			c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z"/>
+	            </g>
+                </g>
+                </svg>
+        </div>
+    </div>
+</div>
+
+<section class="masters wow animate__lightSpeedInRight">
+    <div class="container" id="masters">
+        <h3 class="masters-title">Наши мастера</h3>
+        <div class="masters-text">
+            <div>Вот они, простые герои, несущие в мир стиль и безупречный внешний вид.</div>
+            Команда Barber Club каждый день трудится над тем, чтобы создавать и поддерживать ваш индивидуальный стиль,
+            подчеркивать характер и превращать недостатки в достоинства.
+        </div>
+        <section class="slider">
+            <div class="container-masters">
+                <div class="multiple-items">
+                    <div class="master-item">
+                        <div class="master-name">
+                            Барбер Алексей
+                        </div>
+                        <div class="master-action">
+                            <a href="#" class="master-action-text recording barber-title">Записаться</a>
+                            <div class="dark-bg"><img src="images/dark-bg.png" alt="Dark"></div>
+                            <div class="master-action-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+                                     width="512" height="512" x="0" y="0" viewBox="0 0 512.009 512.009"
+                                     style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        	<g>
+        		<path d="M508.625,247.801L508.625,247.801L392.262,131.437c-4.18-4.881-11.526-5.45-16.407-1.269    c-4.881,4.18-5.45,11.526-1.269,16.407c0.39,0.455,0.814,0.88,1.269,1.269l96.465,96.582H11.636C5.21,244.426,0,249.636,0,256.063    s5.21,11.636,11.636,11.636H472.32l-96.465,96.465c-4.881,4.18-5.45,11.526-1.269,16.407s11.526,5.45,16.407,1.269    c0.455-0.39,0.88-0.814,1.269-1.269l116.364-116.364C513.137,259.67,513.137,252.34,508.625,247.801z"
+                      fill="#bc1212" data-original="#000000" class=""></path>
+        	</g>
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        </g></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="master-item-second">
+                        <div class="master-name">
+                            Барбер Роман
+                        </div>
+                        <div class="master-action">
+                            <a href="#" class="master-action-text recording barber-title">Записаться</a>
+                            <div class="dark-bg"><img src="images/dark-bg.png" alt="Dark"></div>
+                            <div class="master-action-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+                                     width="512" height="512" x="0" y="0" viewBox="0 0 512.009 512.009"
+                                     style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        	<g>
+        		<path d="M508.625,247.801L508.625,247.801L392.262,131.437c-4.18-4.881-11.526-5.45-16.407-1.269    c-4.881,4.18-5.45,11.526-1.269,16.407c0.39,0.455,0.814,0.88,1.269,1.269l96.465,96.582H11.636C5.21,244.426,0,249.636,0,256.063    s5.21,11.636,11.636,11.636H472.32l-96.465,96.465c-4.881,4.18-5.45,11.526-1.269,16.407s11.526,5.45,16.407,1.269    c0.455-0.39,0.88-0.814,1.269-1.269l116.364-116.364C513.137,259.67,513.137,252.34,508.625,247.801z"
+                      fill="#bc1212" data-original="#000000" class=""></path>
+        	</g>
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        </g></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="master-item">
+                        <div class="master-name">
+                            Барбер Николай
+                        </div>
+                        <div class="master-action">
+                            <a href="#" class="master-action-text recording barber-title">Записаться</a>
+                            <div class="dark-bg"><img src="images/dark-bg.png" alt="Dark"></div>
+                            <div class="master-action-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+                                     width="512" height="512" x="0" y="0" viewBox="0 0 512.009 512.009"
+                                     style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        	<g>
+        		<path d="M508.625,247.801L508.625,247.801L392.262,131.437c-4.18-4.881-11.526-5.45-16.407-1.269    c-4.881,4.18-5.45,11.526-1.269,16.407c0.39,0.455,0.814,0.88,1.269,1.269l96.465,96.582H11.636C5.21,244.426,0,249.636,0,256.063    s5.21,11.636,11.636,11.636H472.32l-96.465,96.465c-4.881,4.18-5.45,11.526-1.269,16.407s11.526,5.45,16.407,1.269    c0.455-0.39,0.88-0.814,1.269-1.269l116.364-116.364C513.137,259.67,513.137,252.34,508.625,247.801z"
+                      fill="#bc1212" data-original="#000000" class=""></path>
+        	</g>
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        </g></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="master-item-second">
+                        <div class="master-name">
+                            Барбер Александр
+                        </div>
+                        <div class="master-action">
+                            <a href="#" class="master-action-text recording barber-title">Записаться</a>
+                            <div class="dark-bg"><img src="images/dark-bg.png" alt="Dark"></div>
+                            <div class="master-action-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+                                     width="512" height="512" x="0" y="0" viewBox="0 0 512.009 512.009"
+                                     style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        	<g>
+        		<path d="M508.625,247.801L508.625,247.801L392.262,131.437c-4.18-4.881-11.526-5.45-16.407-1.269    c-4.881,4.18-5.45,11.526-1.269,16.407c0.39,0.455,0.814,0.88,1.269,1.269l96.465,96.582H11.636C5.21,244.426,0,249.636,0,256.063    s5.21,11.636,11.636,11.636H472.32l-96.465,96.465c-4.881,4.18-5.45,11.526-1.269,16.407s11.526,5.45,16.407,1.269    c0.455-0.39,0.88-0.814,1.269-1.269l116.364-116.364C513.137,259.67,513.137,252.34,508.625,247.801z"
+                      fill="#bc1212" data-original="#000000" class=""></path>
+        	</g>
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        </g></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="master-item">
+                        <div class="master-name">
+                            Барбер Петр
+                        </div>
+                        <div class="master-action">
+                            <a href="#" class="master-action-text recording barber-title">Записаться</a>
+                            <div class="dark-bg"><img src="images/dark-bg.png" alt="Dark"></div>
+                            <div class="master-action-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+                                     width="512" height="512" x="0" y="0" viewBox="0 0 512.009 512.009"
+                                     style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        	<g>
+        		<path d="M508.625,247.801L508.625,247.801L392.262,131.437c-4.18-4.881-11.526-5.45-16.407-1.269    c-4.881,4.18-5.45,11.526-1.269,16.407c0.39,0.455,0.814,0.88,1.269,1.269l96.465,96.582H11.636C5.21,244.426,0,249.636,0,256.063    s5.21,11.636,11.636,11.636H472.32l-96.465,96.465c-4.881,4.18-5.45,11.526-1.269,16.407s11.526,5.45,16.407,1.269    c0.455-0.39,0.88-0.814,1.269-1.269l116.364-116.364C513.137,259.67,513.137,252.34,508.625,247.801z"
+                      fill="#bc1212" data-original="#000000" class=""></path>
+        	</g>
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        </g></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="master-item-second">
+                        <div class="master-name">
+                            Барбер Андрей
+                        </div>
+                        <div class="master-action">
+                            <a href="#" class="master-action-text recording barber-title">Записаться</a>
+                            <div class="dark-bg"><img src="images/dark-bg.png" alt="Dark"></div>
+                            <div class="master-action-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+                                     width="512" height="512" x="0" y="0" viewBox="0 0 512.009 512.009"
+                                     style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        	<g>
+        		<path d="M508.625,247.801L508.625,247.801L392.262,131.437c-4.18-4.881-11.526-5.45-16.407-1.269    c-4.881,4.18-5.45,11.526-1.269,16.407c0.39,0.455,0.814,0.88,1.269,1.269l96.465,96.582H11.636C5.21,244.426,0,249.636,0,256.063    s5.21,11.636,11.636,11.636H472.32l-96.465,96.465c-4.881,4.18-5.45,11.526-1.269,16.407s11.526,5.45,16.407,1.269    c0.455-0.39,0.88-0.814,1.269-1.269l116.364-116.364C513.137,259.67,513.137,252.34,508.625,247.801z"
+                      fill="#bc1212" data-original="#000000" class=""></path>
+        	</g>
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        <g xmlns="http://www.w3.org/2000/svg">
+        </g>
+        </g></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>
+
+<section class="discount wow animate__zoomIn">
+    <div class="container" id="discount">
+        <div class="discount-info">
+            <h4 class="discount-title">Дарим вам скидку</h4>
+            <div class="discount-block">
+                <div class="discount-number">-15%</div>
+                <div class="discount-text">Создайте деловой имидж, который достоин Вас!
+                    <div>Получите скидку на ваш первый визит.</div>
+                </div>
+            </div>
+            <div class="discount-actions wow animate__heartBeat">
+                <button class="button-red button-discount">Получить скидку</button>
+            </div>
+        </div>
+        <div class="discount-image">
+            <img src="images/discount-men.png" alt="Men">
+        </div>
+    </div>
+</section>
+
+<div class="window-discount">
+    <div class="popup-discount animate__animated">
+        <div class="popup-discount-text">
+            Просто запишитесь в наш барбершоп и приходите – <span>скидку</span> мы применим после осуществления услуги
+        </div>
+        <div class="discount-percent">
+            %
+        </div>
+        <div class="close-discount">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
+                        <g>
+	                            <g>
+		    <path d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872
+			c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872
+			c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052
+			L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116
+			c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952
+			c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116
+			c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z"/>
+	            </g>
+                </g>
+                </svg>
+        </div>
+    </div>
+</div>
+
+<section class="instagram wow animate__lightSpeedInRight">
+    <div class="container">
+        <div class="subscribe">
+            <h5 class="subscribe-title">Подписывайтесь на наш Instagram</h5>
+            <div class="insta">
+                <div class="insta-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                         xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0"
+                         viewBox="0 0 512.00096 512.00096" style="enable-background:new 0 0 512 512"
+                         xml:space="preserve" class=""><g><path xmlns="http://www.w3.org/2000/svg" d="m373.40625 0h-234.8125c-76.421875 0-138.59375 62.171875-138.59375 138.59375v234.816406c0 76.417969 62.171875 138.589844 138.59375 138.589844h234.816406c76.417969 0 138.589844-62.171875 138.589844-138.589844v-234.816406c0-76.421875-62.171875-138.59375-138.59375-138.59375zm-117.40625 395.996094c-77.195312 0-139.996094-62.800782-139.996094-139.996094s62.800782-139.996094 139.996094-139.996094 139.996094 62.800782 139.996094 139.996094-62.800782 139.996094-139.996094 139.996094zm143.34375-246.976563c-22.8125 0-41.367188-18.554687-41.367188-41.367187s18.554688-41.371094 41.367188-41.371094 41.371094 18.558594 41.371094 41.371094-18.558594 41.367187-41.371094 41.367187zm0 0"  data-original="#000000" class=""></path><path
+                            xmlns="http://www.w3.org/2000/svg"
+                            d="m256 146.019531c-60.640625 0-109.980469 49.335938-109.980469 109.980469 0 60.640625 49.339844 109.980469 109.980469 109.980469 60.644531 0 109.980469-49.339844 109.980469-109.980469 0-60.644531-49.335938-109.980469-109.980469-109.980469zm0 0"
+                            xmlns="http://www.w3.org/2000/svg"
+                            d="m399.34375 96.300781c-6.257812 0-11.351562 5.09375-11.351562 11.351563 0 6.257812 5.09375 11.351562 11.351562 11.351562 6.261719 0 11.355469-5.089844 11.355469-11.351562 0-6.261719-5.09375-11.351563-11.355469-11.351563zm0 0"
+                            data-original="#000000" class=""></path></g></svg>
+                </div>
+                <div class="inst-text">@Barber_club</div>
+                <div class="instagram-actions">
+                    <form action="https://www.instagram.com/brock.barbershop/">
+                        <button class="button-red wow animate__shakeY">Перейти в профиль</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <section class="slider">
+            <div class="container-slider">
+                <div class="slider-items">
+                    <div class="first"></div>
+                    <div class="second"></div>
+                    <div class="third"></div>
+                    <div class="fourth"></div>
+                    <div class="fifth"></div>
+                    <div class="first"></div>
+                    <div class="second"></div>
+                    <div class="third"></div>
+                    <div class="fourth"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>
+
+<section class="contacts wow animate__lightSpeedInRight">
+    <div class="container" id="contacts">
+        <h6 class="contacts-title">Контакты</h6>
+        <div class="contacts-info">
+            <div class="contacts-description">
+                <div class="logo">
+                    <img src="images/Logo.png" alt="Logo">
+                </div>
+                <div class="address-title">Адрес барбершопа:</div>
+                <div class="address-text">
+                    г. Киев, ул. Липинского,
+                    <div>Офисный центр «Леонардо»</div>
+                </div>
+                <div class="work-time-title">Время работы:</div>
+                <div class="work-time-text">Пн-Вс 10:00-21:00</div>
+                <div class="links">
+                    <a href="https://www.facebook.com/brock.barbershop">
+                        <div class="facebook-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                                 xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0"
+                                 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve"
+                                 class=""><g><path xmlns="http://www.w3.org/2000/svg" d="m437 0h-362c-41.351562 0-75 33.648438-75 75v362c0 41.351562 33.648438 75 75 75h151v-181h-60v-90h60v-61c0-49.628906 40.371094-90 90-90h91v90h-91v61h91l-15 90h-76v181h121c41.351562 0 75-33.648438 75-75v-362c0-41.351562-33.648438-75-75-75zm0 0" data-original="#000000" class=""></path></g></svg>
+                        </div>
+                    </a>
+                    <a href="https://www.instagram.com/brock.barbershop/">
+                        <div class="instagram-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                                 xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0"
+                                 viewBox="0 0 512.00096 512.00096" style="enable-background:new 0 0 512 512"
+                                 xml:space="preserve" class=""><g><path xmlns="http://www.w3.org/2000/svg" d="m373.40625 0h-234.8125c-76.421875 0-138.59375 62.171875-138.59375 138.59375v234.816406c0 76.417969 62.171875 138.589844 138.59375 138.589844h234.816406c76.417969 0 138.589844-62.171875 138.589844-138.589844v-234.816406c0-76.421875-62.171875-138.59375-138.59375-138.59375zm-117.40625 395.996094c-77.195312 0-139.996094-62.800782-139.996094-139.996094s62.800782-139.996094 139.996094-139.996094 139.996094 62.800782 139.996094 139.996094-62.800782 139.996094-139.996094 139.996094zm143.34375-246.976563c-22.8125 0-41.367188-18.554687-41.367188-41.367187s18.554688-41.371094 41.367188-41.371094 41.371094 18.558594 41.371094 41.371094-18.558594 41.367187-41.371094 41.367187zm0 0"  data-original="#000000" class=""></path><path
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    d="m256 146.019531c-60.640625 0-109.980469 49.335938-109.980469 109.980469 0 60.640625 49.339844 109.980469 109.980469 109.980469 60.644531 0 109.980469-49.339844 109.980469-109.980469 0-60.644531-49.335938-109.980469-109.980469-109.980469zm0 0"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    d="m399.34375 96.300781c-6.257812 0-11.351562 5.09375-11.351562 11.351563 0 6.257812 5.09375 11.351562 11.351562 11.351562 6.261719 0 11.355469-5.089844 11.355469-11.351562 0-6.261719-5.09375-11.351563-11.355469-11.351563zm0 0"
+                                    data-original="#000000" class=""></path></g></svg>
+                        </div>
+                    </a>
+                    <a href="https://www.youtube.com/">
+                        <div class="youtube-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                                 xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0"
+                                 viewBox="0 0 512.00213 512" style="enable-background:new 0 0 512 512"
+                                 xml:space="preserve"
+                                 class=""><g><path xmlns="http://www.w3.org/2000/svg" d="m501.453125 56.09375c-5.902344-21.933594-23.195313-39.222656-45.125-45.128906-40.066406-10.964844-200.332031-10.964844-200.332031-10.964844s-160.261719 0-200.328125 10.546875c-21.507813 5.902344-39.222657 23.617187-45.125 45.546875-10.542969 40.0625-10.542969 123.148438-10.542969 123.148438s0 83.503906 10.542969 123.148437c5.90625 21.929687 23.195312 39.222656 45.128906 45.128906 40.484375 10.964844 200.328125 10.964844 200.328125 10.964844s160.261719 0 200.328125-10.546875c21.933594-5.902344 39.222656-23.195312 45.128906-45.125 10.542969-40.066406 10.542969-123.148438 10.542969-123.148438s.421875-83.507812-10.546875-123.570312zm0 0" fill="#ffffff" data-original="#ff0000" class=""></path><path
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    d="m204.96875 256 133.269531-76.757812-133.269531-76.757813zm0 0" fill="#121212"
+                                    data-original="#ffffff" class=""></path></g></svg>
+                        </div>
+                    </a>
+                </div>
+                <div class="email-address">info@barberclub.ru</div>
+                <div class="contacts-number">+7 912 816-93-96</div>
+                <div class="button-transparent call wow animate__tada">
+                    <div class="phone">
+                        <img src="images/phone.png" alt="phone">
+                    </div>
+                    <div class="button-text">
+                        Заказать звонок
+                    </div>
+                </div>
+            </div>
+            <div class="shape"></div>
+            <div class="contacts-map">
+                <div class="map" style="overflow:hidden;-ms-filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+    -moz-filter: grayscale(1);
+    -o-filter: grayscale(1);
+    filter: grayscale(1);
+"><a
+                        href="https://yandex.by/maps/org/backenbart/161957048817/?utm_medium=mapframe&utm_source=maps"
+                        style="color:#eee;font-size:12px;position:absolute;top:0px;">Backenbart</a><a
+                        href="https://yandex.by/maps/157/minsk/category/barber_shop/239628851835/?utm_medium=mapframe&utm_source=maps"
+                        style="color:#eee;font-size:12px;position:absolute;top:14px; ">Барбершоп в Минске</a><a
+                        href="https://yandex.by/maps/157/minsk/category/hairdressers/184105812/?utm_medium=mapframe&utm_source=maps"
+                        style="color:#eee;font-size:12px;position:absolute;top:28px;">Парикмахерская в Минске</a>
+                    <iframe src="https://yandex.by/map-widget/v1/-/CCUJjIfI2A"
+                            allowfullscreen="true" style="position:relative; border: none;"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="rights">© Все права защищены</div>
+        </div>
+    </footer>
+</section>
+
+<div class="loading loading-1">
+    <div class="loader-wrapper">
+        <div class="loader">
+            <div class="loader loader-inner"></div>
+        </div>
+    </div>
+</div>
+
+<script src="scripts/jquery-3.6.0.min.js"></script>
+<script src="scripts/jquery.inputmask.min.js"></script>
+<script src="scripts/bootstrap.min.js"></script>
+<script src="scripts/wow.min.js"></script>
+<script src="scripts/jquery-ui.min.js"></script>
+<script src="scripts/slick.min.js"></script>
+<script src="scripts/script.js"></script>
+
+</body>
+</html>

@@ -4,8 +4,8 @@
 }
 
 body {
-    /*font-family: Gilroy, sans-serif;*/
-    /*background-image: url("../images/bg1.png");*/
+    font-family: Gilroy, sans-serif;
+    background-image: url("../images/bg1.png");
     background-size: cover;
 }
 

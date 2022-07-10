@@ -44,12 +44,16 @@
     }
 
     .shape {
-        display: none;
+        /*display: none;*/
     }
 
     .contacts-map {
         position: static;
         width: 677px !important;
+    }
+
+    .shape {
+        width: 677px;
     }
 
     /*.contacts-map {*/
@@ -178,6 +182,10 @@
     .contacts-map {
         width: 475px !important;
     }
+
+    .shape {
+        width: 475px;
+    }
 }
 
 @media screen and (max-width: 1023px) {
@@ -281,7 +289,6 @@
         flex-wrap: wrap;
     }
 
-
     .main-image {
         width: 450px;
         height: 765px;
@@ -336,6 +343,10 @@
 
     .contacts-map {
         width: 360px !important;
+    }
+
+    .shape {
+        width: 360px;
     }
 
     .rights {
@@ -640,6 +651,10 @@
 
     .contacts-map {
         width: 290px !important;
+    }
+
+    .shape {
+        width: 290px;
     }
 
     .contacts-description {

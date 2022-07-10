@@ -877,7 +877,8 @@ body {
 }
 
 .shape {
-    width: 840px;
+    position: absolute;
+    width: 839px;
     height: 565px;
     background-color: #fff;
     mix-blend-mode: difference;
